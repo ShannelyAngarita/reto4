@@ -16,7 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "category")
+@Table(name = "Category")
 public class Categoria {
 
     @Id
@@ -25,8 +25,8 @@ public class Categoria {
     private String name;
     private String description;
 
-    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "category")
-    @JsonIgnoreProperties("category")
+    @OneToMany(cascade = {CascadeType.PERSIST}, mappedBy = "Category")
+    @JsonIgnoreProperties("Category")
     private List<Computador> computers;
 
     public Integer getId() {
